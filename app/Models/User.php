@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'favorite_team',
+        'google_id',
     ];
 
     /**
@@ -41,4 +43,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    public function replies(){
+        return $this->hasMany(Reply::class);
+    }
+    
+    public function posts(){
+        return $this->hasMany(Post::class);
+    }
+    
+    public function team(){
+        return $this->belongsTo(Team::class);
+    }
 }
