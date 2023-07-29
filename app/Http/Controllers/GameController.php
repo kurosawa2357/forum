@@ -48,7 +48,7 @@ class GameController extends Controller
         $post->title = $input['title'];
         $post->content = $input['content'];
         $post->game_id = $game->id;
-        $post->user_id = 1;
+        $post->user_id = Auth::id();
         $post->save();
         if($request->file('images')){
             foreach($request->images as $url){
@@ -119,13 +119,13 @@ class GameController extends Controller
             $date = new DateTime($game->date);
             $event['url'] = url('?date=' . $date->format('Y-m-d'));
             $add_info = [
-                           'title' => $event['title'],
-                           'start' => $event['start'],
-                           'url' => $event['url'],
+                            'title' => $event['title'],
+                            'start' => $event['start'],
+                            'url' => $event['url'],
                         ];
             array_push($array, $add_info);
         }
-                
+        //dd($array);
         return $array;
     }
     

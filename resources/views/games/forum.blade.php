@@ -21,7 +21,6 @@
             </div>
             @foreach($posts as $post)
                 <div class="bg-white rounded-md mt-1 mb-1 p-3">
-                    
                     @auth
                     @if($post->user_id == Auth::id())
                     <button id="dropdownMenuIconHorizontalButton" data-dropdown-toggle="dropdownDotsHorizontal" class="inline-flex items-center p-2 text-sm font-medium text-center text-gray-900 bg-white rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-600" type="button"> 
