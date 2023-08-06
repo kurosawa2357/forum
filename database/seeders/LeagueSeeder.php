@@ -17,7 +17,7 @@ class LeagueSeeder extends Seeder
     public function run()
     {
         DB::table('leagues')->insert([
-            'name' => 'フランス・リーグアン'
+            'name' => 'Jリーグ'
         ]);
     }
 }

@@ -20,6 +20,8 @@ return new class extends Migration
             $table->timestamps();
             $table->foreignID('game_id')->constrained();
             $table->foreignID('user_id')->constrained();
+            $table->softDeletes();
+            $table->string('image_url')->nullable();
         });
     }
 

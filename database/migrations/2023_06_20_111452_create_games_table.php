@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignID('home_team_id')->constrained('teams');
             $table->foreignID('away_team_id')->constrained('teams');
             $table->foreignID('league_id')->constrained();
+            $table->string('date', 30);
         });
     }
 
