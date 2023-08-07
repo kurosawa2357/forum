@@ -97,7 +97,7 @@
                 <input type="file" name="images[]" multiple>
             </div>
             <br>
-            <div class="w-10 text-white bg-emerald-500">
+            <div class="w-10 rounded text-white bg-emerald-500">
                 <input type="submit" value="送信"/>
             </div>
         </form>
